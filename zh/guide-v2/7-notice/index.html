@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>手把手教你玩转 一站式运维平台(CODO) - 7.使用通知中心完成高效率告警 | OpenDevOps</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="CoDo 快速入门文档">
+    
+    <link rel="preload" href="/assets/css/0.styles.9f84806b.css" as="style"><link rel="preload" href="/assets/js/app.428a4efd.js" as="script"><link rel="preload" href="/assets/js/2.d37adb28.js" as="script"><link rel="preload" href="/assets/js/1.7897e08c.js" as="script"><link rel="preload" href="/assets/js/15.2d9dbae8.js" as="script"><link rel="prefetch" href="/assets/js/10.e8d61c4f.js"><link rel="prefetch" href="/assets/js/11.2299cfc7.js"><link rel="prefetch" href="/assets/js/12.bd9d7daa.js"><link rel="prefetch" href="/assets/js/13.283fb839.js"><link rel="prefetch" href="/assets/js/14.d61c4212.js"><link rel="prefetch" href="/assets/js/16.52528d97.js"><link rel="prefetch" href="/assets/js/17.58004c96.js"><link rel="prefetch" href="/assets/js/18.d7b7a62d.js"><link rel="prefetch" href="/assets/js/19.a07193d5.js"><link rel="prefetch" href="/assets/js/20.577c5a47.js"><link rel="prefetch" href="/assets/js/21.0e34729d.js"><link rel="prefetch" href="/assets/js/22.1fe8bb08.js"><link rel="prefetch" href="/assets/js/23.bd1400be.js"><link rel="prefetch" href="/assets/js/24.6551a269.js"><link rel="prefetch" href="/assets/js/25.06c90476.js"><link rel="prefetch" href="/assets/js/26.1cf08589.js"><link rel="prefetch" href="/assets/js/27.533368a4.js"><link rel="prefetch" href="/assets/js/28.ea9d210a.js"><link rel="prefetch" href="/assets/js/29.ca23e064.js"><link rel="prefetch" href="/assets/js/3.bab1dcd8.js"><link rel="prefetch" href="/assets/js/30.767adae4.js"><link rel="prefetch" href="/assets/js/31.871a48cb.js"><link rel="prefetch" href="/assets/js/32.0d9d6430.js"><link rel="prefetch" href="/assets/js/33.c56dc600.js"><link rel="prefetch" href="/assets/js/34.1bbde92f.js"><link rel="prefetch" href="/assets/js/35.708ac851.js"><link rel="prefetch" href="/assets/js/36.24a950d9.js"><link rel="prefetch" href="/assets/js/37.d968d964.js"><link rel="prefetch" href="/assets/js/38.8eea30d8.js"><link rel="prefetch" href="/assets/js/39.a518dd78.js"><link rel="prefetch" href="/assets/js/4.53fd119e.js"><link rel="prefetch" href="/assets/js/40.2f998f89.js"><link rel="prefetch" href="/assets/js/41.8aac6c35.js"><link rel="prefetch" href="/assets/js/42.53d96a58.js"><link rel="prefetch" href="/assets/js/43.68988f1c.js"><link rel="prefetch" href="/assets/js/44.d22a35ad.js"><link rel="prefetch" href="/assets/js/45.4fad4e3e.js"><link rel="prefetch" href="/assets/js/46.14727477.js"><link rel="prefetch" href="/assets/js/47.659b54eb.js"><link rel="prefetch" href="/assets/js/48.6dcd3816.js"><link rel="prefetch" href="/assets/js/49.bb117324.js"><link rel="prefetch" href="/assets/js/5.72da947d.js"><link rel="prefetch" href="/assets/js/50.ab3ab352.js"><link rel="prefetch" href="/assets/js/51.d4bbbf50.js"><link rel="prefetch" href="/assets/js/52.6430a597.js"><link rel="prefetch" href="/assets/js/53.187762de.js"><link rel="prefetch" href="/assets/js/54.a5cb4e56.js"><link rel="prefetch" href="/assets/js/55.8c8d6083.js"><link rel="prefetch" href="/assets/js/56.8d02940a.js"><link rel="prefetch" href="/assets/js/57.562234ea.js"><link rel="prefetch" href="/assets/js/58.7999f748.js"><link rel="prefetch" href="/assets/js/59.c247d75c.js"><link rel="prefetch" href="/assets/js/6.af31a6aa.js"><link rel="prefetch" href="/assets/js/60.7de33f6e.js"><link rel="prefetch" href="/assets/js/61.4aa81803.js"><link rel="prefetch" href="/assets/js/7.c9cb4748.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.01bdc736.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9f84806b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="https://img.opendevops.cn/logo.png" alt="OpenDevOps" class="logo"> <span class="site-name can-hide">OpenDevOps</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/zh/ad/" class="nav-link">
+  招聘
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="部署文档" class="dropdown-title"><span class="title">部署文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="部署文档" class="mobile-dropdown-title"><span class="title">部署文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/guide-v2/2-install/docker.html" class="nav-link">
+  Docker Compose 部署
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide-v2/2-install/k8s.html" class="nav-link">
+  Kubernetes Helm 部署
+</a></li></ul></div></div><div class="nav-item"><a href="/zh/guide-v2/" class="nav-link router-link-active">
+  使用文档
+</a></div><div class="nav-item"><a href="https://www.opendevops.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  官网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://demo.opendevops.cn/user/login" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Demo
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://gitee.com/opendevops/opendevops" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/opendevops-cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="了解更多" class="dropdown-title"><span class="title">了解更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="了解更多" class="mobile-dropdown-title"><span class="title">了解更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/guide/more/faq/" class="nav-link">
+  FAQ
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/qgroup/" class="nav-link">
+  QQ群
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/contributor/" class="nav-link">
+  贡献者
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/permission/" class="nav-link">
+  权限文档
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/example/" class="nav-link">
+  最佳示例
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/zh/ad/" class="nav-link">
+  招聘
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="部署文档" class="dropdown-title"><span class="title">部署文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="部署文档" class="mobile-dropdown-title"><span class="title">部署文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/guide-v2/2-install/docker.html" class="nav-link">
+  Docker Compose 部署
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide-v2/2-install/k8s.html" class="nav-link">
+  Kubernetes Helm 部署
+</a></li></ul></div></div><div class="nav-item"><a href="/zh/guide-v2/" class="nav-link router-link-active">
+  使用文档
+</a></div><div class="nav-item"><a href="https://www.opendevops.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  官网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://demo.opendevops.cn/user/login" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Demo
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://gitee.com/opendevops/opendevops" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/opendevops-cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="了解更多" class="dropdown-title"><span class="title">了解更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="了解更多" class="mobile-dropdown-title"><span class="title">了解更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/guide/more/faq/" class="nav-link">
+  FAQ
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/qgroup/" class="nav-link">
+  QQ群
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/contributor/" class="nav-link">
+  贡献者
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/permission/" class="nav-link">
+  权限文档
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/example/" class="nav-link">
+  最佳示例
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>它是什么</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh/guide-v2/" aria-current="page" class="sidebar-link">OpenDevOps</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>架构</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>如何安装</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh/guide-v2/2-install/docker.html" class="sidebar-link">Docker Compose 部署</a></li><li><a href="/zh/guide-v2/2-install/k8s.html" class="sidebar-link">Kubernetes Helm 部署</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>手把手教你玩转平台</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh/guide-v2/3-admin/" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 3.0 使用admin管理用户权限</a></li><li><a href="/zh/guide-v2/3-admin/biz-auth.html" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 3.1 配置用户的业务权限</a></li><li><a href="/zh/guide-v2/3-admin/role-auth.html" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 3.2 配置角色权限</a></li><li><a href="/zh/guide-v2/4-cmdb/" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 4.0 使用CMDB管理数据资源</a></li><li><a href="/zh/guide-v2/4-cmdb/cloud-asset.html" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 4.1 使用CMDB管理数据资源</a></li><li><a href="/zh/guide-v2/4-cmdb/biz-tree.html" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - CMDB 4.2 服务树</a></li><li><a href="/zh/guide-v2/5-codo-flow/" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 5.使用flow编排自动化工作流</a></li><li><a href="/zh/guide-v2/5-codo-flow/codo-agent.html" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 5.1 安装 codo-agent</a></li><li><a href="/zh/guide-v2/5-codo-flow/example-cicd.html" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 5.2 使用 codo-flow 实现 应用自动化CI/CD</a></li><li><a href="/zh/guide-v2/5-codo-flow/example-distribute-deploy.html" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 5.3 使用 codo-flow + cmdb 实现 跨地区应用部署</a></li><li><a href="/zh/guide-v2/5-codo-flow/example-flow-audit.html" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 5.4 codo-flow 配置流程审批</a></li><li><a href="/zh/guide-v2/6-config-center/" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 6.使用配置中心管理配置</a></li><li><a href="/zh/guide-v2/7-notice/" aria-current="page" class="active sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 7.使用通知中心完成高效率告警</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/zh/guide-v2/7-notice/#项目结构" class="sidebar-link">项目结构</a></li><li class="sidebar-sub-header"><a href="/zh/guide-v2/7-notice/#术语解释" class="sidebar-link">术语解释</a></li><li class="sidebar-sub-header"><a href="/zh/guide-v2/7-notice/#快速入门" class="sidebar-link">快速入门</a></li></ul></li><li><a href="/zh/guide-v2/8-cloud-native-management/" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 8.使用云原生管理平台管理多地集群</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>其他相关</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh/guide/more/faq/" class="sidebar-link">FAQ</a></li><li><a href="/zh/guide/more/qgroup/" class="sidebar-link">加入交流群</a></li><li><a href="/zh/guide/more/contributor/" class="sidebar-link">贡献者</a></li><li><a href="/zh/guide/more/permission/" class="sidebar-link">权限文档</a></li><li><a href="/zh/guide/more/example/" class="sidebar-link">最佳实践</a></li><li><a href="/zh/guide/more/update/" class="sidebar-link">如何更新</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="手把手教你玩转-一站式运维平台-codo-7-使用通知中心完成高效率告警"><a href="#手把手教你玩转-一站式运维平台-codo-7-使用通知中心完成高效率告警" class="header-anchor">#</a> 手把手教你玩转 一站式运维平台(CODO) - 7.使用通知中心完成高效率告警</h1> <h2 id="项目结构"><a href="#项目结构" class="header-anchor">#</a> 项目结构</h2> <p><img src="/assets/img/image-20241222150347223.75d04bf8.png" alt="image-20241222150347223"></p> <div class="language-text extra-class"><pre class="language-text"><code>.
+├── docs
+├── etc
+├── internal
+│   ├── biz
+│   ├── conf
+│   ├── dep
+│   ├── ievents
+│   ├── imiddleware
+│   ├── impl
+│   │   ├── alerts
+│   │   └── data
+│   │       └── models
+│   ├── pkg
+│   │   └── istr
+│   ├── server
+│   └── service
+├── meta
+├── pb
+│   ├── channel
+│   ├── healthy
+│   ├── router
+│   ├── templates
+│   └── user
+├── scripts
+└── third_party
+    ├── google
+    │   ├── api
+    │   └── protobuf
+    │       └── compiler
+    ├── khttp
+    ├── openapi
+    │   └── v3
+    └── validate
+</code></pre></div><h2 id="术语解释"><a href="#术语解释" class="header-anchor">#</a> 术语解释</h2> <ul><li>消息模板(无状态): 一个消息的模板定义, 负责定义渲染引擎 &amp; 发出渠道</li> <li>通知通道(有状态): 一组通知的集合, 在不同的通知级别中, 发向不同的 <strong>消息模板</strong>, 同时在这里配置 <strong>消息模板</strong> 的渠道方的配置(密钥等)</li> <li>通知路由(有状态): 一个消息解析&amp;路由器, 作为一个 http 回调端点, 对回调的内容进行解析, 并将消息路由到对应配置的 <strong>通知通道</strong>.
+<ul><li>labels: 通知进行路由的数据依据, 从回调的 httpQuery 和 jsonBody 两处取值进行合并, 相同key 时, jsonBody 优先</li> <li>data: 用于消息模板的数据渲染, 从 jsonBody 取值</li></ul></li></ul> <h2 id="快速入门"><a href="#快速入门" class="header-anchor">#</a> 快速入门</h2> <h3 id="配置消息模板"><a href="#配置消息模板" class="header-anchor">#</a> 配置消息模板</h3> <p>在 消息模板 页签, 点击 创建, 即可进行配置.</p> <p>模板用途 用于在配置通知通道时, 与对应的通道通途对应.</p> <p>目前支持:</p> <ul><li>飞书机器人(飞书 webhook 机器人)</li> <li>飞书应用(飞书bot 单聊)</li> <li>钉钉机器人(钉钉 webhook 机器人)</li> <li>钉钉应用(钉钉bot 单聊)</li> <li>企业微信机器人(企业微信 webhook 机器人)</li> <li>企业微信应用(企业微信bot 单聊)</li> <li>阿里云短信</li> <li>阿里云电话</li> <li>腾讯云短信</li> <li>腾讯云电话</li> <li>邮件</li> <li>webhook</li></ul> <p><img src="/assets/img/image-20241222153508118.fd7c5001.png" alt="image-20241222153508118"></p> <h3 id="快速调试-飞书webhook机器人为例"><a href="#快速调试-飞书webhook机器人为例" class="header-anchor">#</a> 快速调试(飞书webhook机器人为例)</h3> <p>在填入 <strong>模板内容</strong> 之后, 点击 <strong>保存</strong> 之后, 可以对模板进行快速调试, 在 <strong>地址</strong> + <strong>密钥</strong> 上填入 <strong>飞书webhook机器人</strong> 的配置</p> <p>关于添加自定义机器人, 可以查看: <a href="https://open.feishu.cn/document/client-docs/bot-v3/add-custom-bot?lang=zh-CN" target="_blank" rel="noopener noreferrer">飞书自定义机器人指南<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><img src="/assets/img/image-20241222153448489.8e8fc118.png" alt="image-20241222153448489"></p> <p><img src="/assets/img/image-20241222153547809.cca03f91.png" alt="image-20241222153547809"></p> <h3 id="配置通知通道"><a href="#配置通知通道" class="header-anchor">#</a> 配置通知通道</h3> <p>注意事项:</p> <ul><li>选中对应的 <strong>通道用途</strong> 之后, 后续只能选择 <strong>对应通道用途</strong> 的 <strong>消息模板</strong></li> <li><strong>通知用户</strong> 为默认通知用户, 可以在通知路由回调接口时, body 中传入 key 为 “noticer”, value 为 “英文逗号分隔的用户名”, 用于替换</li> <li>默认提供两个固定模板(作为简单使用, 无需配置 <strong>通知模板</strong>), 如果不需要可以 告警级别设置为空(电话告警), webhook 设置为空(飞书机器人告警)</li></ul> <p>配置基础信息:</p> <p><img src="/assets/img/image-20241222154613953.ee10ccdb.png" alt="image-20241222154613953"></p> <p>配置固定模板:</p> <p><img src="/assets/img/image-20241222154626725.46335b86.png" alt="image-20241222154626725"></p> <p>配置自定义模板:</p> <p><img src="/assets/img/image-20241222154915998.851bee01.png" alt="image-20241222154915998"></p> <h4 id="回调配置"><a href="#回调配置" class="header-anchor">#</a> 回调配置</h4> <p>还可以配置回调用于信息交互</p> <p><img src="/assets/img/image-20250108143443953.e877510c.png" alt="image-20250108143443953"></p> <p>展示</p> <p><img src="/assets/img/image-20250108143606522.08d72924.png" alt="image-20250108143606522"></p> <h3 id="配置通知路由"><a href="#配置通知路由" class="header-anchor">#</a> 配置通知路由</h3> <p>注意:</p> <ul><li>通知路由地址: <strong>网关地址/api/noc/v1/router-alert</strong> ( 支持 POST | GET )</li> <li>http post 中的 jsonBody 会用作消息模板的数据渲染</li> <li>jsonBody 和 httpQuery 部份会一起作为 <strong>labels数据</strong> 进行通知路由匹配</li> <li>如果 severity 为空, 则默认级别为 “警告”</li></ul> <p>特殊业务意义字段:</p> <div class="language-golang extra-class"><pre class="language-text"><code>FieldsMessage     = &quot;message&quot;      // 通用消息字段 (从 jsonBody 取值)
+FieldsManager     = &quot;codo_manager&quot; // 业务负责人 (从 httpQuery + jsonBody 取值)
+FieldsNoticer     = &quot;codo_noticer&quot; // 内置通知人 (从 httpQuery + jsonBody 取值)
+FieldsSeverity    = &quot;severity&quot;     // 告警等级 [fatal | error | warn | info] (从 httpQuery + jsonBody 取值)
+FieldsTitle       = &quot;title&quot;        // 告警标题 (从 httpQuery + jsonBody 取值)
+FieldsNativeTitle = &quot;codo_title&quot;   // 原生标题 不做其他处理 (从 httpQuery + jsonBody 取值)
+FieldsStatus      = &quot;status&quot;       // 告警状态 [resolved | firing | resolving | inactive] (从 httpQuery + jsonBody 取值)
+FieldsAppCn       = &quot;cmdb_bizcn&quot;   // 业务中文描述 (从 httpQuery + jsonBody 取值)
+FieldsCallbackArgs = &quot;codo_callback_args&quot; // 回调参数, 只能是个字符串 (从 httpQuery + jsonBody 取值)
+</code></pre></div><p><img src="/assets/img/image-20241222155831594.dcfd4d09.png" alt="image-20241222155831594"></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/zh/guide-v2/6-config-center/" class="prev">
+        手把手教你玩转 一站式运维平台(CODO) - 6.使用配置中心管理配置
+      </a></span> <span class="next"><a href="/zh/guide-v2/8-cloud-native-management/">
+        手把手教你玩转 一站式运维平台(CODO) - 8.使用云原生管理平台管理多地集群
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.428a4efd.js" defer></script><script src="/assets/js/2.d37adb28.js" defer></script><script src="/assets/js/1.7897e08c.js" defer></script><script src="/assets/js/15.2d9dbae8.js" defer></script>
+  </body>
+</html>

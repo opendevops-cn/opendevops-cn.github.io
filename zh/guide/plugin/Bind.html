@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DNS Bind | OpenDevOps</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="CoDo 快速入门文档">
+    
+    <link rel="preload" href="/assets/css/0.styles.9f84806b.css" as="style"><link rel="preload" href="/assets/js/app.428a4efd.js" as="script"><link rel="preload" href="/assets/js/2.d37adb28.js" as="script"><link rel="preload" href="/assets/js/1.7897e08c.js" as="script"><link rel="preload" href="/assets/js/53.187762de.js" as="script"><link rel="prefetch" href="/assets/js/10.e8d61c4f.js"><link rel="prefetch" href="/assets/js/11.2299cfc7.js"><link rel="prefetch" href="/assets/js/12.bd9d7daa.js"><link rel="prefetch" href="/assets/js/13.283fb839.js"><link rel="prefetch" href="/assets/js/14.d61c4212.js"><link rel="prefetch" href="/assets/js/15.2d9dbae8.js"><link rel="prefetch" href="/assets/js/16.52528d97.js"><link rel="prefetch" href="/assets/js/17.58004c96.js"><link rel="prefetch" href="/assets/js/18.d7b7a62d.js"><link rel="prefetch" href="/assets/js/19.a07193d5.js"><link rel="prefetch" href="/assets/js/20.577c5a47.js"><link rel="prefetch" href="/assets/js/21.0e34729d.js"><link rel="prefetch" href="/assets/js/22.1fe8bb08.js"><link rel="prefetch" href="/assets/js/23.bd1400be.js"><link rel="prefetch" href="/assets/js/24.6551a269.js"><link rel="prefetch" href="/assets/js/25.06c90476.js"><link rel="prefetch" href="/assets/js/26.1cf08589.js"><link rel="prefetch" href="/assets/js/27.533368a4.js"><link rel="prefetch" href="/assets/js/28.ea9d210a.js"><link rel="prefetch" href="/assets/js/29.ca23e064.js"><link rel="prefetch" href="/assets/js/3.bab1dcd8.js"><link rel="prefetch" href="/assets/js/30.767adae4.js"><link rel="prefetch" href="/assets/js/31.871a48cb.js"><link rel="prefetch" href="/assets/js/32.0d9d6430.js"><link rel="prefetch" href="/assets/js/33.c56dc600.js"><link rel="prefetch" href="/assets/js/34.1bbde92f.js"><link rel="prefetch" href="/assets/js/35.708ac851.js"><link rel="prefetch" href="/assets/js/36.24a950d9.js"><link rel="prefetch" href="/assets/js/37.d968d964.js"><link rel="prefetch" href="/assets/js/38.8eea30d8.js"><link rel="prefetch" href="/assets/js/39.a518dd78.js"><link rel="prefetch" href="/assets/js/4.53fd119e.js"><link rel="prefetch" href="/assets/js/40.2f998f89.js"><link rel="prefetch" href="/assets/js/41.8aac6c35.js"><link rel="prefetch" href="/assets/js/42.53d96a58.js"><link rel="prefetch" href="/assets/js/43.68988f1c.js"><link rel="prefetch" href="/assets/js/44.d22a35ad.js"><link rel="prefetch" href="/assets/js/45.4fad4e3e.js"><link rel="prefetch" href="/assets/js/46.14727477.js"><link rel="prefetch" href="/assets/js/47.659b54eb.js"><link rel="prefetch" href="/assets/js/48.6dcd3816.js"><link rel="prefetch" href="/assets/js/49.bb117324.js"><link rel="prefetch" href="/assets/js/5.72da947d.js"><link rel="prefetch" href="/assets/js/50.ab3ab352.js"><link rel="prefetch" href="/assets/js/51.d4bbbf50.js"><link rel="prefetch" href="/assets/js/52.6430a597.js"><link rel="prefetch" href="/assets/js/54.a5cb4e56.js"><link rel="prefetch" href="/assets/js/55.8c8d6083.js"><link rel="prefetch" href="/assets/js/56.8d02940a.js"><link rel="prefetch" href="/assets/js/57.562234ea.js"><link rel="prefetch" href="/assets/js/58.7999f748.js"><link rel="prefetch" href="/assets/js/59.c247d75c.js"><link rel="prefetch" href="/assets/js/6.af31a6aa.js"><link rel="prefetch" href="/assets/js/60.7de33f6e.js"><link rel="prefetch" href="/assets/js/61.4aa81803.js"><link rel="prefetch" href="/assets/js/7.c9cb4748.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.01bdc736.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9f84806b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="https://img.opendevops.cn/logo.png" alt="OpenDevOps" class="logo"> <span class="site-name can-hide">OpenDevOps</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/zh/ad/" class="nav-link">
+  招聘
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="部署文档" class="dropdown-title"><span class="title">部署文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="部署文档" class="mobile-dropdown-title"><span class="title">部署文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/guide-v2/2-install/docker.html" class="nav-link">
+  Docker Compose 部署
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide-v2/2-install/k8s.html" class="nav-link">
+  Kubernetes Helm 部署
+</a></li></ul></div></div><div class="nav-item"><a href="/zh/guide-v2/" class="nav-link">
+  使用文档
+</a></div><div class="nav-item"><a href="https://www.opendevops.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  官网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://demo.opendevops.cn/user/login" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Demo
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://gitee.com/opendevops/opendevops" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/opendevops-cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="了解更多" class="dropdown-title"><span class="title">了解更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="了解更多" class="mobile-dropdown-title"><span class="title">了解更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/guide/more/faq/" class="nav-link">
+  FAQ
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/qgroup/" class="nav-link">
+  QQ群
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/contributor/" class="nav-link">
+  贡献者
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/permission/" class="nav-link">
+  权限文档
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/example/" class="nav-link">
+  最佳示例
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/zh/ad/" class="nav-link">
+  招聘
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="部署文档" class="dropdown-title"><span class="title">部署文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="部署文档" class="mobile-dropdown-title"><span class="title">部署文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/guide-v2/2-install/docker.html" class="nav-link">
+  Docker Compose 部署
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide-v2/2-install/k8s.html" class="nav-link">
+  Kubernetes Helm 部署
+</a></li></ul></div></div><div class="nav-item"><a href="/zh/guide-v2/" class="nav-link">
+  使用文档
+</a></div><div class="nav-item"><a href="https://www.opendevops.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  官网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://demo.opendevops.cn/user/login" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Demo
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://gitee.com/opendevops/opendevops" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/opendevops-cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="了解更多" class="dropdown-title"><span class="title">了解更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="了解更多" class="mobile-dropdown-title"><span class="title">了解更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/guide/more/faq/" class="nav-link">
+  FAQ
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/qgroup/" class="nav-link">
+  QQ群
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/contributor/" class="nav-link">
+  贡献者
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/permission/" class="nav-link">
+  权限文档
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/example/" class="nav-link">
+  最佳示例
+</a></li></ul></div></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="dns-bind"><a href="#dns-bind" class="header-anchor">#</a> DNS Bind</h1> <blockquote><p>opendevops平台所用组件<a href="https://github.com/opendevops-cn/codo-dns" target="_blank" rel="noopener noreferrer">域名管理<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>Bind部署文档， 部分文档会因为版本迭代不可用，此文档只作为参考文档，谢谢。</p></blockquote> <p><strong>安装配置</strong></p> <div class="language-bash extra-class"><pre class="language-bash"><code>yum <span class="token function">install</span> <span class="token parameter variable">-y</span> <span class="token builtin class-name">bind</span> bind-chroot bind-utils
+</code></pre></div><ul><li><p>如果安装了bind-chroot（其中chroot是 change root 的缩写），BIND会被封装到一个伪根目录内，配置文件的位置变为：/var/named/chroot/etc/named.conf</p></li> <li><p>BIND服务主配置文件/var/named/chroot/var/named/</p></li> <li><p>zone文件chroot是通过相关文件封装在一个伪根目录内，已达到安全防护的目的，一旦程序被攻破，将只能访问伪根目录内的内容，而不是真实的根目录</p></li> <li><p>BIND安装好之后不会有预制的配置文件，但是在BIND的文档文件夹内（/usr/share/doc/bind-9.9.4），BIND为我们提供了配置文件模板，我们可以直接拷贝过来：</p></li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">cp</span> <span class="token parameter variable">-r</span> /usr/share/doc/bind-9.9.4/sample/etc/* /var/named/chroot/etc/
+<span class="token function">cp</span> <span class="token parameter variable">-r</span> /usr/share/doc/bind-9.9.4/sample/var/* /var/named/chroot/var/
+</code></pre></div><ul><li>配置BIND服务的主配置文件（/var/named/chroot/etc/named.conf，并加入zone参数</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code>options <span class="token punctuation">{</span>
+        listen-on port <span class="token number">53</span>       <span class="token punctuation">{</span> <span class="token number">127.0</span>.0.1<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        listen-on-v6 port <span class="token number">53</span> <span class="token punctuation">{</span> ::1<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        allow-query     <span class="token punctuation">{</span> any<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        directory <span class="token string">&quot;/var/named&quot;</span><span class="token punctuation">;</span>
+        recursion <span class="token function">yes</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+zone <span class="token string">&quot;ss.com&quot;</span>  <span class="token punctuation">{</span>
+        <span class="token builtin class-name">type</span> master<span class="token punctuation">;</span>
+        <span class="token function">file</span> <span class="token string">&quot;ss.com.zone&quot;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>新建ss.com.zone文件 如下</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># vim /var/named/chroot/var/named/ss.com.zone</span>
+<span class="token variable">$TTL</span> <span class="token number">86400</span>
+<span class="token variable">$ORIGIN</span> ss.com.
+@  IN SOA  ss.com. admin.ss.com. <span class="token punctuation">(</span>
+                    <span class="token number">20190426</span><span class="token punctuation">;</span> serial <span class="token comment">#更新序列号</span>
+                    1D  <span class="token punctuation">;</span> refresh <span class="token comment">#更新时间</span>
+                    1H  <span class="token punctuation">;</span> retry <span class="token comment">#重试延时</span>
+                    1W  <span class="token punctuation">;</span> expire <span class="token comment">#失效时间</span>
+                    3H  <span class="token punctuation">;</span> minimum <span class="token comment">#无效解析记录的缓存时间</span>
+<span class="token punctuation">)</span>
+    IN  NS  ns1.ss.com.
+
+ns1 <span class="token number">3600</span> IN   A   <span class="token number">192.168</span>.99.99
+www <span class="token number">3600</span> IN   A   <span class="token number">172.20</span>.66.110
+<span class="token function">ftp</span> <span class="token number">3600</span> IN   A  <span class="token number">10.128</span>.105.250
+</code></pre></div><ul><li>禁用bind默认方式启动，改用bind-chroot方式启动。命令如下：</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code>/usr/libexec/setup-named-chroot.sh /var/named/chroot on
+systemctl stop named
+systemctl disable named
+systemctl start named-chroot
+systemctl <span class="token builtin class-name">enable</span> named-chroot
+</code></pre></div><ul><li>检查语法</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code>named-checkzone ss.com /var/named/ss.com.zone
+zone ss.com/IN: loaded serial <span class="token number">20190426</span>
+OK
+named-checkconf
+</code></pre></div><ul><li>查看是否启动，命令：</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">ps</span> -ef<span class="token operator">|</span><span class="token function">grep</span> named
+</code></pre></div><ul><li>测试DNS服务，命令如下：</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">### 编辑dns解析文件 并写入你的DNS服务器地址</span>
+<span class="token function">vim</span> /etc/resolv.conf 
+nameserver <span class="token number">172.16</span>.0.111
+<span class="token function">dig</span> ftp.ss.com
+</code></pre></div><p><strong>参考文档</strong></p> <p><a href="https://blog.csdn.net/bbwangj/article/details/82079405" target="_blank" rel="noopener noreferrer">参考文档1<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://blog.51cto.com/liqingbiao/2093064" target="_blank" rel="noopener noreferrer">参考文档2<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://blog.csdn.net/bpingchang/article/details/38377053" target="_blank" rel="noopener noreferrer">参考文档3<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.428a4efd.js" defer></script><script src="/assets/js/2.d37adb28.js" defer></script><script src="/assets/js/1.7897e08c.js" defer></script><script src="/assets/js/53.187762de.js" defer></script>
+  </body>
+</html>

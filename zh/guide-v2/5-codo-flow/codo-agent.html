@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>手把手教你玩转 一站式运维平台(CODO) - 5.1 安装 codo-agent | OpenDevOps</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="CoDo 快速入门文档">
+    
+    <link rel="preload" href="/assets/css/0.styles.9f84806b.css" as="style"><link rel="preload" href="/assets/js/app.428a4efd.js" as="script"><link rel="preload" href="/assets/js/2.d37adb28.js" as="script"><link rel="preload" href="/assets/js/1.7897e08c.js" as="script"><link rel="preload" href="/assets/js/27.533368a4.js" as="script"><link rel="prefetch" href="/assets/js/10.e8d61c4f.js"><link rel="prefetch" href="/assets/js/11.2299cfc7.js"><link rel="prefetch" href="/assets/js/12.bd9d7daa.js"><link rel="prefetch" href="/assets/js/13.283fb839.js"><link rel="prefetch" href="/assets/js/14.d61c4212.js"><link rel="prefetch" href="/assets/js/15.2d9dbae8.js"><link rel="prefetch" href="/assets/js/16.52528d97.js"><link rel="prefetch" href="/assets/js/17.58004c96.js"><link rel="prefetch" href="/assets/js/18.d7b7a62d.js"><link rel="prefetch" href="/assets/js/19.a07193d5.js"><link rel="prefetch" href="/assets/js/20.577c5a47.js"><link rel="prefetch" href="/assets/js/21.0e34729d.js"><link rel="prefetch" href="/assets/js/22.1fe8bb08.js"><link rel="prefetch" href="/assets/js/23.bd1400be.js"><link rel="prefetch" href="/assets/js/24.6551a269.js"><link rel="prefetch" href="/assets/js/25.06c90476.js"><link rel="prefetch" href="/assets/js/26.1cf08589.js"><link rel="prefetch" href="/assets/js/28.ea9d210a.js"><link rel="prefetch" href="/assets/js/29.ca23e064.js"><link rel="prefetch" href="/assets/js/3.bab1dcd8.js"><link rel="prefetch" href="/assets/js/30.767adae4.js"><link rel="prefetch" href="/assets/js/31.871a48cb.js"><link rel="prefetch" href="/assets/js/32.0d9d6430.js"><link rel="prefetch" href="/assets/js/33.c56dc600.js"><link rel="prefetch" href="/assets/js/34.1bbde92f.js"><link rel="prefetch" href="/assets/js/35.708ac851.js"><link rel="prefetch" href="/assets/js/36.24a950d9.js"><link rel="prefetch" href="/assets/js/37.d968d964.js"><link rel="prefetch" href="/assets/js/38.8eea30d8.js"><link rel="prefetch" href="/assets/js/39.a518dd78.js"><link rel="prefetch" href="/assets/js/4.53fd119e.js"><link rel="prefetch" href="/assets/js/40.2f998f89.js"><link rel="prefetch" href="/assets/js/41.8aac6c35.js"><link rel="prefetch" href="/assets/js/42.53d96a58.js"><link rel="prefetch" href="/assets/js/43.68988f1c.js"><link rel="prefetch" href="/assets/js/44.d22a35ad.js"><link rel="prefetch" href="/assets/js/45.4fad4e3e.js"><link rel="prefetch" href="/assets/js/46.14727477.js"><link rel="prefetch" href="/assets/js/47.659b54eb.js"><link rel="prefetch" href="/assets/js/48.6dcd3816.js"><link rel="prefetch" href="/assets/js/49.bb117324.js"><link rel="prefetch" href="/assets/js/5.72da947d.js"><link rel="prefetch" href="/assets/js/50.ab3ab352.js"><link rel="prefetch" href="/assets/js/51.d4bbbf50.js"><link rel="prefetch" href="/assets/js/52.6430a597.js"><link rel="prefetch" href="/assets/js/53.187762de.js"><link rel="prefetch" href="/assets/js/54.a5cb4e56.js"><link rel="prefetch" href="/assets/js/55.8c8d6083.js"><link rel="prefetch" href="/assets/js/56.8d02940a.js"><link rel="prefetch" href="/assets/js/57.562234ea.js"><link rel="prefetch" href="/assets/js/58.7999f748.js"><link rel="prefetch" href="/assets/js/59.c247d75c.js"><link rel="prefetch" href="/assets/js/6.af31a6aa.js"><link rel="prefetch" href="/assets/js/60.7de33f6e.js"><link rel="prefetch" href="/assets/js/61.4aa81803.js"><link rel="prefetch" href="/assets/js/7.c9cb4748.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.01bdc736.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9f84806b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="https://img.opendevops.cn/logo.png" alt="OpenDevOps" class="logo"> <span class="site-name can-hide">OpenDevOps</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/zh/ad/" class="nav-link">
+  招聘
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="部署文档" class="dropdown-title"><span class="title">部署文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="部署文档" class="mobile-dropdown-title"><span class="title">部署文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/guide-v2/2-install/docker.html" class="nav-link">
+  Docker Compose 部署
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide-v2/2-install/k8s.html" class="nav-link">
+  Kubernetes Helm 部署
+</a></li></ul></div></div><div class="nav-item"><a href="/zh/guide-v2/" class="nav-link router-link-active">
+  使用文档
+</a></div><div class="nav-item"><a href="https://www.opendevops.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  官网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://demo.opendevops.cn/user/login" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Demo
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://gitee.com/opendevops/opendevops" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/opendevops-cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="了解更多" class="dropdown-title"><span class="title">了解更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="了解更多" class="mobile-dropdown-title"><span class="title">了解更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/guide/more/faq/" class="nav-link">
+  FAQ
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/qgroup/" class="nav-link">
+  QQ群
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/contributor/" class="nav-link">
+  贡献者
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/permission/" class="nav-link">
+  权限文档
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/example/" class="nav-link">
+  最佳示例
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/zh/ad/" class="nav-link">
+  招聘
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="部署文档" class="dropdown-title"><span class="title">部署文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="部署文档" class="mobile-dropdown-title"><span class="title">部署文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/guide-v2/2-install/docker.html" class="nav-link">
+  Docker Compose 部署
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide-v2/2-install/k8s.html" class="nav-link">
+  Kubernetes Helm 部署
+</a></li></ul></div></div><div class="nav-item"><a href="/zh/guide-v2/" class="nav-link router-link-active">
+  使用文档
+</a></div><div class="nav-item"><a href="https://www.opendevops.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  官网
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://demo.opendevops.cn/user/login" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Demo
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://gitee.com/opendevops/opendevops" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/opendevops-cn" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="了解更多" class="dropdown-title"><span class="title">了解更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="了解更多" class="mobile-dropdown-title"><span class="title">了解更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/zh/guide/more/faq/" class="nav-link">
+  FAQ
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/qgroup/" class="nav-link">
+  QQ群
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/contributor/" class="nav-link">
+  贡献者
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/permission/" class="nav-link">
+  权限文档
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/more/example/" class="nav-link">
+  最佳示例
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>它是什么</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh/guide-v2/" aria-current="page" class="sidebar-link">OpenDevOps</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>架构</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>如何安装</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh/guide-v2/2-install/docker.html" class="sidebar-link">Docker Compose 部署</a></li><li><a href="/zh/guide-v2/2-install/k8s.html" class="sidebar-link">Kubernetes Helm 部署</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>手把手教你玩转平台</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh/guide-v2/3-admin/" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 3.0 使用admin管理用户权限</a></li><li><a href="/zh/guide-v2/3-admin/biz-auth.html" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 3.1 配置用户的业务权限</a></li><li><a href="/zh/guide-v2/3-admin/role-auth.html" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 3.2 配置角色权限</a></li><li><a href="/zh/guide-v2/4-cmdb/" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 4.0 使用CMDB管理数据资源</a></li><li><a href="/zh/guide-v2/4-cmdb/cloud-asset.html" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 4.1 使用CMDB管理数据资源</a></li><li><a href="/zh/guide-v2/4-cmdb/biz-tree.html" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - CMDB 4.2 服务树</a></li><li><a href="/zh/guide-v2/5-codo-flow/" aria-current="page" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 5.使用flow编排自动化工作流</a></li><li><a href="/zh/guide-v2/5-codo-flow/codo-agent.html" aria-current="page" class="active sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 5.1 安装 codo-agent</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/zh/guide-v2/5-codo-flow/codo-agent.html#简单使用" class="sidebar-link">简单使用</a></li><li class="sidebar-sub-header"><a href="/zh/guide-v2/5-codo-flow/codo-agent.html#网络拓扑" class="sidebar-link">网络拓扑</a></li><li class="sidebar-sub-header"><a href="/zh/guide-v2/5-codo-flow/codo-agent.html#任务调度" class="sidebar-link">任务调度</a></li></ul></li><li><a href="/zh/guide-v2/5-codo-flow/example-cicd.html" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 5.2 使用 codo-flow 实现 应用自动化CI/CD</a></li><li><a href="/zh/guide-v2/5-codo-flow/example-distribute-deploy.html" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 5.3 使用 codo-flow + cmdb 实现 跨地区应用部署</a></li><li><a href="/zh/guide-v2/5-codo-flow/example-flow-audit.html" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 5.4 codo-flow 配置流程审批</a></li><li><a href="/zh/guide-v2/6-config-center/" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 6.使用配置中心管理配置</a></li><li><a href="/zh/guide-v2/7-notice/" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 7.使用通知中心完成高效率告警</a></li><li><a href="/zh/guide-v2/8-cloud-native-management/" class="sidebar-link">手把手教你玩转 一站式运维平台(CODO) - 8.使用云原生管理平台管理多地集群</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>其他相关</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zh/guide/more/faq/" class="sidebar-link">FAQ</a></li><li><a href="/zh/guide/more/qgroup/" class="sidebar-link">加入交流群</a></li><li><a href="/zh/guide/more/contributor/" class="sidebar-link">贡献者</a></li><li><a href="/zh/guide/more/permission/" class="sidebar-link">权限文档</a></li><li><a href="/zh/guide/more/example/" class="sidebar-link">最佳实践</a></li><li><a href="/zh/guide/more/update/" class="sidebar-link">如何更新</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="手把手教你玩转-一站式运维平台-codo-5-1-安装-codo-agent"><a href="#手把手教你玩转-一站式运维平台-codo-5-1-安装-codo-agent" class="header-anchor">#</a> 手把手教你玩转 一站式运维平台(CODO) - 5.1 安装 codo-agent</h1> <h1 id="codo-agent入门到精通"><a href="#codo-agent入门到精通" class="header-anchor">#</a> codo-agent入门到精通</h1> <h2 id="简单使用"><a href="#简单使用" class="header-anchor">#</a> 简单使用</h2> <h3 id="codo-agent"><a href="#codo-agent" class="header-anchor">#</a> codo-agent</h3> <h4 id="启动-agnet"><a href="#启动-agnet" class="header-anchor">#</a> 启动 agnet</h4> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token function">curl</span> <span class="token parameter variable">-L</span> <span class="token parameter variable">-o</span> ./codo-agent https://github.com/opendevops-cn/codo-agent-server/releases/download/v1.8.6/codo-agent-linux-amd64
+<span class="token function">chmod</span> +x ./codo-agent
+./codo-agent --config-file ./config.yaml
+</code></pre></div><h4 id="配置详情"><a href="#配置详情" class="header-anchor">#</a> 配置详情</h4> <p>以下是简单配置:</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token comment"># 日志等级(必填, 默认 info)</span>
+<span class="token comment"># - DEBUG</span>
+<span class="token comment"># - INFO</span>
+<span class="token comment"># - WARN</span>
+<span class="token comment"># - ERROR</span>
+<span class="token key atrule">LOG-LEVEL</span><span class="token punctuation">:</span> info
+<span class="token comment"># 业务ID(必填, 默认 502)</span>
+<span class="token key atrule">BIZ-ID</span><span class="token punctuation">:</span> <span class="token string">&quot;504&quot;</span>
+<span class="token comment"># 连接服务地址(必填, agent-server 的地址, clientId 需要全局唯一)</span>
+<span class="token comment"># SERVER-ADDRESS: &quot;ws://127.0.0.1:8002/api/v1/codo/agent?clientId=huaweibook1&quot;</span>
+<span class="token comment"># 也可以是 AGENT-PROXY 的地址</span>
+<span class="token comment"># SERVER-ADDRESS: &quot;ws://127.0.0.1:9999/api/v1/codo/agent?clientId=huaweibook1&quot;</span>
+<span class="token comment"># 也可以填 demo 的地址</span>
+<span class="token key atrule">SERVER-ADDRESS</span><span class="token punctuation">:</span> <span class="token string">&quot;ws://demo.opendevops.cn/api/agent-ws/v1/codo/agent?clientId=cctest&quot;</span>
+</code></pre></div><p>以下是全量配置:</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token comment"># 日志等级(必填, 建议 info)</span>
+<span class="token comment"># - DEBUG</span>
+<span class="token comment"># - INFO</span>
+<span class="token comment"># - WARN</span>
+<span class="token comment"># - ERROR</span>
+<span class="token key atrule">LOG-LEVEL</span><span class="token punctuation">:</span> info
+<span class="token comment"># RootPath 日志保存路径(选填, 默认是 工作目录)</span>
+<span class="token comment"># 用于：</span>
+<span class="token comment"># - 存储脚本文件</span>
+<span class="token comment"># - 存储密钥文件</span>
+<span class="token comment"># - 存储执行日志文件</span>
+<span class="token comment"># - 存储agent日志文件</span>
+<span class="token key atrule">ROOT-PATH</span><span class="token punctuation">:</span> <span class="token string">&quot;./data/agent&quot;</span>
+<span class="token comment"># 连接服务地址(必填, agent-server/proxy 的地址, clientId 需要全局唯一)</span>
+<span class="token key atrule">SERVER-ADDRESS</span><span class="token punctuation">:</span> <span class="token string">&quot;ws://127.0.0.1:9999/api/v1/codo/agent?clientId=huaweibook1&quot;</span>
+<span class="token comment"># 节点类型(选填)</span>
+<span class="token comment"># - normal(默认值)</span>
+<span class="token comment"># - master(当节点为master时，自动开启AGENT代理模式, 用于将多个 AGENT 的连接归并起来一起转发到 AGENT-SERVER)(生产环境推荐使用)</span>
+<span class="token key atrule">NODE-TYPE</span><span class="token punctuation">:</span> <span class="token string">&quot;normal&quot;</span>
+<span class="token comment"># 业务ID(必填, 默认 502)</span>
+<span class="token key atrule">BIZ-ID</span><span class="token punctuation">:</span> <span class="token string">&quot;525&quot;</span>
+<span class="token comment"># 本地绑定ip（master模式），本地上报ip地址(选填, 默认取第一张非loppback网卡的ip)</span>
+<span class="token key atrule">BIND-IP</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span>
+<span class="token comment"># 本地绑定端口（master模式下有效）(选填, 默认 20800)</span>
+<span class="token key atrule">BIND-PORT</span><span class="token punctuation">:</span> <span class="token number">20800</span>
+<span class="token comment"># 日志行数限制(选填, 默认 800)</span>
+<span class="token key atrule">ROW-LIMIT</span><span class="token punctuation">:</span> <span class="token number">2000</span>
+<span class="token comment"># 最大执行命令数(选填, 默认 100)</span>
+<span class="token key atrule">MAX-EXEC-CMD</span><span class="token punctuation">:</span> <span class="token number">100</span>
+<span class="token comment"># 以脚本路径作为工作目录(选填, 默认 false)</span>
+<span class="token key atrule">SCRIPT-PATH-AS-WD</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+<span class="token comment"># 强指脚本的工作目录(选填, 默认 工作目录)</span>
+<span class="token key atrule">WORK-DIR</span><span class="token punctuation">:</span> <span class="token string">&quot;./data/wd&quot;</span>
+<span class="token comment"># 日志清理间隔(单位：天)(选填, 默认 30)</span>
+<span class="token key atrule">LOG-CLEAN-INTERVAL</span><span class="token punctuation">:</span> <span class="token number">30</span>
+<span class="token comment"># 实验性参数：WINDOWS 强杀子进程进程树(选填, 默认 false)</span>
+<span class="token key atrule">EXPR-FORCE-KILL-SUB-PROC</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+</code></pre></div><h4 id="修改-agent-id"><a href="#修改-agent-id" class="header-anchor">#</a> 修改 AGENT ID</h4> <p>agent-id 新版本自动生成, 一旦生成, 一般来说禁止修改.
+如果有必须要修改的需求, 可以在 codo-agent 的工作目录下修改</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token builtin class-name">echo</span> <span class="token parameter variable">-n</span> <span class="token string">&quot;cctest1&quot;</span> <span class="token operator">&gt;</span> ./codo_status/.agent_id
+</code></pre></div><h4 id="agent-绑定业务"><a href="#agent-绑定业务" class="header-anchor">#</a> AGENT 绑定业务</h4> <p>agent 连接上之后会默认进入到 CMDB 的 Agent 列表页面.</p> <p>点击 <strong>生成主机</strong> 用来在业务树上 绑定 agent 机器</p> <p><img src="/assets/img/image-20250728224325083.bd270200.png" alt="image-20250728224325083"></p> <blockquote><p>注意:</p> <p>只有集群和模块可以绑定资源, 需要右键业务树节点多创建几层子节点</p></blockquote> <p><img src="/assets/img/image-20250728224637293.8ca5a85e.png" alt="image-20250728224637293"></p> <h3 id="codo-agent-server"><a href="#codo-agent-server" class="header-anchor">#</a> codo-agent-server</h3> <h4 id="数据库-migrate"><a href="#数据库-migrate" class="header-anchor">#</a> 数据库 migrate</h4> <div class="language- extra-class"><pre class="language-text"><code>./codo-agent-server migrate --config-file ./config.yaml
+</code></pre></div><h4 id="启动-agent-server"><a href="#启动-agent-server" class="header-anchor">#</a> 启动 agent-server</h4> <div class="language- extra-class"><pre class="language-text"><code>./codo-agent-server --config-file ./config.yaml
+</code></pre></div><h4 id="配置详情-2"><a href="#配置详情-2" class="header-anchor">#</a> 配置详情</h4> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token comment"># HTTP 服务端口(用于接收codo-flow的请求)</span>
+<span class="token key atrule">PORT</span><span class="token punctuation">:</span> <span class="token number">9996</span>
+<span class="token comment"># GRPC 通信端口(暂时没用, 用于服务注册)</span>
+<span class="token key atrule">RPC-PORT</span><span class="token punctuation">:</span> <span class="token number">9997</span>
+<span class="token comment"># websocket 连接专用端口(用于codo-agent建立 ws 连接)</span>
+<span class="token key atrule">WS-PORT</span><span class="token punctuation">:</span> <span class="token number">9999</span>
+<span class="token comment"># 性能采集端口(用于提供 metrics )</span>
+<span class="token key atrule">PPROF-PORT</span><span class="token punctuation">:</span> <span class="token number">9995</span>
+<span class="token comment"># 本机服务监听地址(监听地址, 建议 0.0.0.0)</span>
+<span class="token key atrule">BIND-ADDRESS</span><span class="token punctuation">:</span> 0.0.0.0
+
+
+<span class="token comment"># 日志存放地址(存放 agent-server 打印的运行日志)</span>
+<span class="token key atrule">ROOT-PATH</span><span class="token punctuation">:</span> E<span class="token punctuation">:</span>\go\src\agent<span class="token punctuation">-</span>server
+<span class="token comment"># 日志等级(默认 DEBUG)</span>
+<span class="token comment"># - DEBUG</span>
+<span class="token comment"># - INFO</span>
+<span class="token comment"># - WARN</span>
+<span class="token comment"># - ERROR</span>
+<span class="token key atrule">LOG-LEVEL</span><span class="token punctuation">:</span> DEBUG
+
+
+<span class="token comment"># RabbitMQ 配置 (用于将 agent 的日志上报到 codo-flow)</span>
+<span class="token key atrule">MQCONFIG</span><span class="token punctuation">:</span>
+  <span class="token key atrule">ENABLED</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">SCHEMA</span><span class="token punctuation">:</span> <span class="token string">&quot;amqp&quot;</span>
+  <span class="token key atrule">HOST</span><span class="token punctuation">:</span> <span class="token string">&quot;127.0.0.1&quot;</span>
+  <span class="token key atrule">PORT</span><span class="token punctuation">:</span> <span class="token number">5672</span>
+  <span class="token key atrule">USERNAME</span><span class="token punctuation">:</span> <span class="token string">&quot;admin&quot;</span>
+  <span class="token key atrule">PASSWORD</span><span class="token punctuation">:</span> <span class="token string">&quot;123456&quot;</span>
+  <span class="token key atrule">VHOST</span><span class="token punctuation">:</span> <span class="token string">&quot;codo&quot;</span>
+
+
+<span class="token comment"># MYSQL 配置, 用于存储 agent-server 的数据</span>
+<span class="token key atrule">DB-CONFIG</span><span class="token punctuation">:</span>
+  <span class="token key atrule">DB-TYPE</span><span class="token punctuation">:</span> mysql
+  <span class="token key atrule">DB-USER</span><span class="token punctuation">:</span> root
+  <span class="token key atrule">DB-PASSWORD</span><span class="token punctuation">:</span> <span class="token number">123456</span>
+  <span class="token key atrule">DB-HOST</span><span class="token punctuation">:</span> 127.0.0.1
+  <span class="token key atrule">DB-NAME</span><span class="token punctuation">:</span> codo_agent_server
+  <span class="token key atrule">DB-TABLE-PREFIX</span><span class="token punctuation">:</span> codo_
+  <span class="token key atrule">DB-FILE</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span>
+  <span class="token key atrule">DB-PORT</span><span class="token punctuation">:</span> <span class="token number">3306</span>
+
+
+<span class="token comment"># REDIS 配置</span>
+<span class="token comment"># 用于:</span>
+<span class="token comment">#  存储 codo-agent 的心跳</span>
+<span class="token key atrule">REDIS</span><span class="token punctuation">:</span>
+  <span class="token key atrule">R-HOST</span><span class="token punctuation">:</span> 127.0.0.1
+  <span class="token key atrule">R-PORT</span><span class="token punctuation">:</span> <span class="token number">6379</span>
+  <span class="token key atrule">R-PASSWORD</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span>
+  <span class="token key atrule">R-DB</span><span class="token punctuation">:</span> <span class="token number">1</span>
+<span class="token comment"># REDIS 发布订阅配置</span>
+<span class="token comment"># 用于:</span>
+<span class="token comment">#  CDMB 任务同步</span>
+<span class="token comment">#  CODO 任务分发</span>
+<span class="token key atrule">PUBLISH</span><span class="token punctuation">:</span>
+  <span class="token key atrule">P-HOST</span><span class="token punctuation">:</span> 127.0.0.1
+  <span class="token key atrule">P-PORT</span><span class="token punctuation">:</span> <span class="token number">6379</span>
+  <span class="token key atrule">P-PASSWORD</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span>
+  <span class="token key atrule">P-DB</span><span class="token punctuation">:</span> <span class="token number">1</span>
+  <span class="token key atrule">P-ENABLED</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+</code></pre></div><h4 id="接口"><a href="#接口" class="header-anchor">#</a> 接口</h4> <h5 id="下发任务-异步"><a href="#下发任务-异步" class="header-anchor">#</a> 下发任务(异步)</h5> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">curl</span> <span class="token parameter variable">-X</span> POST <span class="token number">127.0</span>.0.1:9996/api/v1/agent/task/batch <span class="token punctuation">\</span>
+  <span class="token parameter variable">-H</span> <span class="token string">'Content-Type: application/json'</span> <span class="token punctuation">\</span>
+  <span class="token parameter variable">-d</span> <span class="token string">'[
+    {
+      &quot;taskId&quot;: &quot;task123&quot;,
+      &quot;taskType&quot;: &quot;ExecCmd&quot;,
+      &quot;agentId&quot;: &quot;agent456&quot;,
+      &quot;args&quot;: {
+        &quot;cmd&quot;: &quot;sh ${script_path}&quot;,
+        &quot;timeout&quot;: 300,
+        &quot;scriptInfo&quot;: &quot;#!/bin/bash\n echo helloworld&quot;,
+				&quot;scriptParams&quot;: &quot;{\&quot;a\&quot;:1}&quot;
+      }
+    },
+    {
+      &quot;taskId&quot;: &quot;task124&quot;,
+      &quot;taskType&quot;: &quot;RevokeTask&quot;,
+      &quot;agentId&quot;: &quot;agent789&quot;,
+      &quot;args&quot;: {&quot;taskId&quot;: &quot;11asd&quot;}
+    }
+  ]'</span>
+  
+不同的 task-type 对应的 args 参数不同
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+GetRunningTask: 获取正在执行的任务
+<span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+RevokeTask: 取消任务
+<span class="token punctuation">{</span><span class="token string">&quot;taskId&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;11asd&quot;</span><span class="token punctuation">}</span>
+
+ExecCmd: 执行任务
+<span class="token punctuation">{</span>
+<span class="token string">&quot;cmd&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;sh <span class="token variable">${script_path}</span>&quot;</span>, // 执行的命令<span class="token punctuation">(</span>必填<span class="token punctuation">)</span>, <span class="token variable">${script_path}</span> 是一个魔术变量, 当 scriptInfo 有内容时, 会替换成 scriptInfo 存储的路径
+<span class="token string">&quot;timeout&quot;</span><span class="token builtin class-name">:</span> <span class="token number">300</span>, // 任务超时时间
+“scriptInfo”: “<span class="token comment">#!/bin/bash\n echo helloworld”, // 脚本模式下, 脚本的内容(选填)</span>
+<span class="token string">&quot;scriptParams&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;{<span class="token entity" title="\&quot;">\&quot;</span>a<span class="token entity" title="\&quot;">\&quot;</span>:1}&quot;</span> // 额外注入的环境变量信息<span class="token punctuation">(</span>选填<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h5 id="下发任务-同步"><a href="#下发任务-同步" class="header-anchor">#</a> 下发任务(同步)</h5> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 获取正在执行的任务</span>
+
+<span class="token function">curl</span> <span class="token parameter variable">-X</span> POST http://127.0.0.1:9996/api/v1/codo/call <span class="token punctuation">\</span>
+<span class="token parameter variable">-H</span> <span class="token string">'Content-Type: application/json'</span> <span class="token punctuation">\</span>
+<span class="token parameter variable">-d</span> <span class="token string">'{&quot;TaskID&quot;: &quot;xxx&quot;, &quot;AgentID&quot;: &quot;huaweibook1:6666&quot;, &quot;TaskType&quot;: &quot;GetRunningTask&quot;}'</span>
+
+
+<span class="token comment"># 下发任务</span>
+<span class="token function">curl</span> <span class="token parameter variable">-X</span> POST http://127.0.0.1:9996/api/v1/codo/call <span class="token punctuation">\</span>
+<span class="token parameter variable">-H</span> <span class="token string">'Content-Type: application/json'</span> <span class="token punctuation">\</span>
+<span class="token parameter variable">-d</span> <span class="token string">'{&quot;TaskID&quot;: &quot;abc---huaweibook1:6666&quot;, &quot;AgentID&quot;: &quot;huaweibook1:6666&quot;, &quot;TaskType&quot;: &quot;ExecCmd&quot;, &quot;args&quot;:{&quot;cmd&quot;:&quot;echo helloworld&quot;,&quot;scriptParams&quot;:&quot;{}&quot;}}'</span>
+</code></pre></div><h5 id="如果-tasktype-是-execcmd-可以获取实时日志"><a href="#如果-tasktype-是-execcmd-可以获取实时日志" class="header-anchor">#</a> 如果  TaskType 是 ExecCmd, 可以获取实时日志</h5> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 获取任务 abc---huaweibook1:6666 的日志</span>
+<span class="token function">curl</span> <span class="token string">&quot;http://127.0.0.1:9996/api/v1/manager/agent/task/logv2?task_id=abc---huaweibook1:6666&quot;</span>
+</code></pre></div><h5 id="获取在线的-agent-列表"><a href="#获取在线的-agent-列表" class="header-anchor">#</a> 获取在线的 agent 列表</h5> <div class="language- extra-class"><pre class="language-text"><code>curl 127.0.0.1:9996/api/v1/agent/info
+</code></pre></div><h2 id="网络拓扑"><a href="#网络拓扑" class="header-anchor">#</a> 网络拓扑</h2> <p>在不同网络分区建立 PROXY 节点，收敛网络流量，由 PROXY 节点统一向外部中心调度服务进行流量传输。</p> <h2 id="任务调度"><a href="#任务调度" class="header-anchor">#</a> 任务调度</h2> <blockquote><p>之所以推送任务到 redis , 是 因为 agent-server 本身多副本, 对应需要执行任务的 agent 的 ws连接 不一定在 接受到任务下发的 agent-server 上</p></blockquote> <p><img src="/assets/img/image-20241010172733008.6aea0f7d.png" alt="image-20241010172733008"></p> <h3 id="在-execcmd-时的调度"><a href="#在-execcmd-时的调度" class="header-anchor">#</a> 在 ExecCmd 时的调度</h3> <p><img src="/assets/img/image-20241014134832686.d23118c7.png" alt="image-20241014134832686"></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/zh/guide-v2/5-codo-flow/" class="prev router-link-active">
+        手把手教你玩转 一站式运维平台(CODO) - 5.使用flow编排自动化工作流
+      </a></span> <span class="next"><a href="/zh/guide-v2/5-codo-flow/example-cicd.html">
+        手把手教你玩转 一站式运维平台(CODO) - 5.2 使用 codo-flow 实现 应用自动化CI/CD
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.428a4efd.js" defer></script><script src="/assets/js/2.d37adb28.js" defer></script><script src="/assets/js/1.7897e08c.js" defer></script><script src="/assets/js/27.533368a4.js" defer></script>
+  </body>
+</html>
